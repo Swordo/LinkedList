@@ -1,9 +1,12 @@
 
-var input = "abdbbadr";     // change input in order to cheack code is working or not
+var input = "aaabdbbadr";     // change input in order to cheack code is working or not
 var arrayedInput = [];
 var output = [];
 var count = 0;
 var finalOutput = "";
+var exists = {},
+    outArr = [],
+    elm;
 function arrUP(input) {    // This funtion change string to array and change first of sting elemnt to upper case letter
     arrayedInput[0] = input[0].toUpperCase();
 
@@ -36,10 +39,19 @@ function out() {
 
 
 }
-
+function removeDuplicate(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        elm = arr[i];
+        if (!exists[elm]) {
+            outArr.push(elm);
+            exists[elm] = true;
+        }
+    }
+}
 out();
-for (let i = 0; i < output.length; i++) {
-    finalOutput += output[i];
+removeDuplicate(output);
+for (let i = 0; i < outArr.length; i++) {
+    finalOutput += outArr[i];
 }
 console.log(finalOutput);
 
