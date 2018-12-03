@@ -36,8 +36,6 @@ function out() {
             }
         }
     }
-
-
 }
 function removeDuplicate(arr) {
     for (var i = 0; i < arr.length; i++) {
