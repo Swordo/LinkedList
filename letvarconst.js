@@ -1,7 +1,4 @@
 
-
-
-
 function adressMaker(adress) {
     const { city, state } = adress;
     const newAdress = {
